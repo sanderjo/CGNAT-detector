@@ -1,8 +1,10 @@
 # CGNAT-detector
 CGNAT detector
 
+With CGNAT, your CPE (router) has no public IPv4 address on its WAN interface. So how can we find that (without UPnP or access to the CPE)?
+
 Method: 
-1. find public ipv4. In case of no CGNAT: that ipv4 is on the WAN-interface of your CPE. In CGNAT: not so
+1. find the real public ipv4 with which you are seen on Internet.
 2. find the traceroute to that ipv4
 3. in the traceroute, check if your local router responds to that public ipv4. If not: CGNAT
 
