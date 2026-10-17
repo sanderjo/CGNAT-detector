@@ -1,7 +1,9 @@
 # CGNAT-detector
 CGNAT detector
 
-With CGNAT, your CPE (router) has no public IPv4 address on its WAN interface. So how can we find that (without UPnP or access to the CPE)?
+With CGNAT, your CPE (router) has no public IPv4 address on its WAN interface. A typical CGNAT WAN IP address is 100.64.193.104.
+
+So how can we find that (without UPnP or access to the CPE)?
 
 Method: 
 1. find the real public ipv4 with which you are seen on Internet.
