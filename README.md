@@ -48,7 +48,11 @@ HOST: 9952b12eed9a                Loss%   Snt   Last   Avg  Best  Wrst StDev
   4.|-- 100.64.0.1                 0.0%     2   15.1  14.0  12.8  15.1   1.6
   5.|-- ???                       100.0     2    0.0   0.0   0.0   0.0   0.0
 root@9952b12eed9a:/#
+
+root@9952b12eed9a:/# ip route show | grep default
+default via 172.17.0.1 dev eth0 
 ```
+
 # via mobile hotspot to 4G/5G, probably some kind of CGNAT
 
 ```
