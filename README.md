@@ -63,6 +63,10 @@ HOST: x360                        Loss%   Snt   Last   Avg  Best  Wrst StDev
   6.|-- 10.121.183.1               0.0%     2   24.6  85.4  24.6 146.2  86.0
   7.|-- 10.121.183.0               0.0%     2   24.7  35.1  24.7  45.5  14.6
   8.|-- ???                       100.0     2    0.0   0.0   0.0   0.0   0.0
+
+
+$ ip route show | grep default
+default via 10.240.252.82 dev wlo1 proto dhcp src 10.240.252.223 metric 600
 ```
 
 
