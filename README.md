@@ -12,6 +12,12 @@ Method:
 3. in the traceroute, check if your local router responds to that public ipv4. If not: CGNAT
 4. based on the intermediate IP addresses, determine the type of connection and/or NAT types
 
+# tools needed
+
+```
+sudo apt install -y iproute2 mtr curl
+```
+
 # non-CGAT, typical LAN (with RFC1918 = local NAT)
 ```
 $ mtr -nrc2 $(curl -s -4 ifconfig.me)
