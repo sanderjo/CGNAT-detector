@@ -62,7 +62,7 @@ HOST: ddaceec7cbd2                Loss%   Snt   Last   Avg  Best  Wrst StDev
 root@ddaceec7cbd2:/#
 ```
 
-# VPS, public IPv4 on the machine itself
+# non-CGNAT, VPS, public IPv4 on the machine itself
 
 ```
 $ mtr -nrc2 $(curl -s -4 ifconfig.me)
