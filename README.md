@@ -35,6 +35,19 @@ HOST: x360                        Loss%   Snt   Last   Avg  Best  Wrst StDev
   4.|-- ???                       100.0     2    0.0   0.0   0.0   0.0   0.0
 ```
 
+# CGNAT, from within docker
+
+```
+root@9952b12eed9a:/# mtr -nrc2 $(curl -s -4 ifconfig.me)
+Start: 2026-10-18T22:29:44+0200
+HOST: 9952b12eed9a                Loss%   Snt   Last   Avg  Best  Wrst StDev
+  1.|-- 172.17.0.1                 0.0%     2    0.2   0.2   0.2   0.2   0.0
+  2.|-- 192.168.1.254              0.0%     2   10.9  10.2   9.4  10.9   1.1
+  3.|-- ???                       100.0     2    0.0   0.0   0.0   0.0   0.0
+  4.|-- 100.64.0.1                 0.0%     2   15.1  14.0  12.8  15.1   1.6
+  5.|-- ???                       100.0     2    0.0   0.0   0.0   0.0   0.0
+root@9952b12eed9a:/#
+```
 
 # non-CGNAT, but inside ChromeOS' Linux
 
