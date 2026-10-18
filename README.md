@@ -18,6 +18,22 @@ Method:
 sudo apt install -y iproute2 mtr curl
 ```
 
+# detection script
+
+`cgnat-detect.sh` automates the method above and reports CGNAT, Docker, ChromeOS and RFC1918 LAN (use `-v` to also show the mtr output):
+
+```
+$ ./cgnat-detect.sh
+Public IPv4 : 62.45.100.164
+Local IPv4  : 192.168.1.235   gateway: 192.168.1.254
+Real hops   : 192.168.1.254 ??? 100.64.0.1 ???
+
+CGNAT       : YES (public IPv4 not reachable in traceroute, CGNAT hop 100.64.0.1)
+Docker      : no
+ChromeOS    : no
+RFC1918 LAN : yes (192.168.1.235)
+```
+
 # non-CGAT, typical LAN (with RFC1918 = local NAT)
 ```
 $ mtr -nrc2 $(curl -s -4 ifconfig.me)
