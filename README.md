@@ -10,8 +10,15 @@ Method:
 2. find the traceroute to that ipv4
 3. in the traceroute, check if your local router responds to that public ipv4. If not: CGNAT
 
-# non-CGAT, typical LAN (with RFC1918)
+# non-CGAT, typical LAN (with RFC1918 = local NAT)
 ```
+$ mtr -nrc2 $(curl -s -4 ifconfig.me)
+Start: 2026-10-18T08:33:45+0200
+HOST: xubuntu                     Loss%   Snt   Last   Avg  Best  Wrst StDev
+  1.|-- 88.75.45.236               0.0%     2   61.5  54.1  46.6  61.5  10.5
+
+$ ip a show | grep 192
+    inet 192.168.178.31/24 brd 192.168.178.255 scope global dynamic noprefixroute wlp2s0
 
 ```
 
