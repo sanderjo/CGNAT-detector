@@ -10,6 +10,7 @@ Method:
 1. find the real public ipv4 with which you are seen on Internet.
 2. find the traceroute to that ipv4
 3. in the traceroute, check if your local router responds to that public ipv4. If not: CGNAT
+4. based on the intermediate IP addresses, determine the type of connection and/or NAT types
 
 # non-CGAT, typical LAN (with RFC1918 = local NAT)
 ```
