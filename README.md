@@ -76,7 +76,7 @@ default via 10.240.252.82 dev wlo1 proto dhcp src 10.240.252.223 metric 600
 
 # non-CGNAT, but inside ChromeOS' Linux
 
-A "100." address is not proof of CGNAT:
+A "100." address is not proof of CGNAT. It seems 100.115.92.0/23 is used by ChromeOS (although it's from the CGNAT pool)
 
 ```
 $ mtr -nrc2 $(curl -s -4 ifconfig.me)
