@@ -48,6 +48,19 @@ HOST: penguin                     Loss%   Snt   Last   Avg  Best  Wrst StDev
   3.|-- 88.75.45.236               0.0%     2    4.5  13.5   4.5  22.4  12.7
 ```
 
+# non-CGNAT, but docker on chromeOS' linux
+
+```
+root@ddaceec7cbd2:/# mtr -nrc2 $(curl -s -4 ifconfig.me)
+Start: 2026-10-18T17:33:48+0200
+HOST: ddaceec7cbd2                Loss%   Snt   Last   Avg  Best  Wrst StDev
+  1.|-- 172.17.0.1                 0.0%     2    0.1   0.1   0.1   0.1   0.0
+  2.|-- 100.115.92.193             0.0%     2    0.1   0.2   0.1   0.3   0.1
+  3.|-- 100.115.92.25              0.0%     2    0.7   0.6   0.5   0.7   0.1
+  4.|-- 82.75.45.236               0.0%     2    8.4   8.6   8.4   8.8   0.3
+root@ddaceec7cbd2:/#
+```
+
 # VPS, public IPv4 on the machine itself
 
 ```
